@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@font-face {
+  font-family: "Impact Normal";
+  src: url("../fonts/IMPACT.TTF") format("ttf"),
+}
+
+body {
+  margin: 0px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  /* background-image: radial-gradient(#3e1b91 15%, #291262 60%); */
+  background-image: url("../img/bkg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  padding: 0px 1em;
+}
+
+.title-links {
+  height: 96vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 14em;
+}
+
+.menu-btns {
+  position: absolute;
+  position: absolute;
+  top: 43vh;
+  margin-left: 2em;
+}
+
+.menu-btns li {
+  box-shadow: 7px 6px 25px -7px rgb(0, 0, 0);
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-top: 1em;
+}
+
+.footer {
+  font-size: 10px;
+  font-weight: lighter;
+}
+
+.title {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-size: 6em;
+}
+
+h2 {
+  font-size: 2em;
+  letter-spacing: .27rem;
+}
+
+h1, h2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 0px;
+  /* box-shadow: inset 10px 10px 5px 0px rgba(0,0,0,0.31); */
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.links li:not(:last-child) {
+  margin-right: 4em;
+}
+
+.links li {
+  margin-top: 14em;
+}
+
+.links a {
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative
+}
+
+.links a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.links a:hover:after {
+  width: 100%;
+  left: 0;
+}
