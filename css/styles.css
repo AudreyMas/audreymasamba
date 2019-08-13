@@ -138,6 +138,7 @@ h1, h2 {
   position: absolute;
   opacity: 0;
   cursor: context-menu;
+  width: 2px;
 }
 
 
