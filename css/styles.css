@@ -41,7 +41,8 @@ ul {
   justify-content: space-between;
   z-index: 2;
 }
-.footer{
+
+.footer {
   padding: 0 0 0.5em 0.5em;
 }
 
@@ -57,10 +58,7 @@ ul {
 }
 
 .menu-btns {
-  position: absolute;
-  position: absolute;
-  top: 43vh;
-  margin-left: 2em;
+  display: none;
 }
 
 .menu-btns li {
@@ -134,13 +132,13 @@ h1, h2 {
   width: 100%;
   left: 0;
 }
-.links input{
+
+.links input {
   position: absolute;
   opacity: 0;
   cursor: context-menu;
   width: 2px;
 }
-
 
 /* float bulles */
 
@@ -213,6 +211,12 @@ h1, h2 {
 /* Responsive */
 
 @media (min-width: 768px) {
+  .menu-btns {
+    display: block;
+    position: absolute;
+    top: 43vh;
+    margin-left: 2em;
+  }
   h1 {
     font-size: 5em;
   }
