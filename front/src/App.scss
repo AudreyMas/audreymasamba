@@ -32,8 +32,10 @@ body {
       height: 100vh;
       display: flex;
       flex-direction: column;
-      align-content: space-between;
-      justify-content: space-between;
+      &:not(.form) {
+        align-content: space-between;
+        justify-content: space-between;
+      }
       z-index: 2;
       .title-links,
       .links,
@@ -190,6 +192,12 @@ body {
           }
         }
       }
+    }
+
+    //SIGNUP
+    .content.form {
+      justify-content: center!important;
+      align-items: center;
     }
   }
 }
