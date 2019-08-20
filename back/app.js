@@ -6,10 +6,8 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const app = express();
 let cors = require('cors');
-const mysql = require('mysql');
-let route = require('./api/index');
-
 const connection = require("./connexion/db");
+
 
 // je configure l'application
 app.use(morgan('dev'));
@@ -43,12 +41,11 @@ app.get('/projects', (req, res) => {
 app.post('/projects/add', (req,res)=>{
   const {name,description} = req.query;
   const INSERT_PROJECT =`INSERT INTO projects (name, description) VALUE('${name}','${description}')`
-
-  connection.query(INSERT_PROJECT, (err, result) => {
+  connection.query(INSERT_PROJECT, (err, results) => {
     if (err) {
       return res.send(err)
     } else {
-      return res.json('successfully added')
+      return res.send('successfully added')
     }
   });
 });

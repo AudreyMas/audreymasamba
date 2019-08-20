@@ -4,7 +4,7 @@ const connection = mysql.createConnection({
   host: `localhost`,
   // port     : `3306`,
   user: `root`, //completer avec vos infos
-  password: `root`, //completer avec vos infos
+  password: `${process.env.DB_PASS}`, //completer avec vos infos
   database: `db_portfolio` //completer avec vos infos
 });
 
