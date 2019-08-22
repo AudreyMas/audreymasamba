@@ -12,7 +12,7 @@ const connection = require("./connexion/db");
 // je configure l'application
 app.use(morgan('dev'));
 app.use(cors());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
@@ -45,18 +45,40 @@ app.post('/projects/add', (req,res)=>{
     if (err) {
       return res.send(err)
     } else {
-      return res.send('successfully added')
+      return res.status(200).send('successfully added')
+    }
+  });
+});
+
+// écoute de l'url "/api/employees"
+app.put('/projects/update/:id', (req, res) => {
+
+  // récupération des données envoyées
+  const idProject = req.params.id;
+  const formData = req.body;
+
+  // connection à la base de données, et insertion de l'employé
+  connection.query('UPDATE movie SET ? WHERE id = ?', [formData, idProject], err => {
+
+    if (err) {
+      // Si une erreur est survenue, alors on informe l'utilisateur de l'erreur
+      console.log(err);
+      res.status(500).send("Update ERROR");
+    } else {
+
+      // Si tout s'est bien passé, on envoie un statut "ok".
+      res.sendStatus(200);
     }
   });
 });
 
 app.delete('/projects/delete/:id', (req, res) => {
   // récupération des données envoyées
-  const idEmployee = req.params.id;
-  const {name} = req.query;
+  const idProject = req.params.id;
+  // const {name} = req.query;
 
   // connexion à la base de données, et suppression de l'employé
-  connection.query('DELETE FROM projects WHERE id = ?', [name], err => {
+  connection.query('DELETE FROM projects WHERE id = ?', [idProject], err => {
 
     if (err) {
       // Si une erreur est survenue, alors on informe l'utilisateur de l'erreur

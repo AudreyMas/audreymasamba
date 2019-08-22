@@ -6,22 +6,16 @@ class AddProject extends Component {
     super(props)
     this.state = {
       // projects: [],
-      project: [
-    
-        { name: '' },
-        { descritpion: '' }, 
-        {
-          image_1: ''
-        },
-      ]
-
+      name: '',
+      description: '',
+      image_1: '',
     }
   }
 
   addProduct = (event) => {
     event.preventDefault();
 
-    const { project } = this.state
+    // const { project } = this.state
     const config = {
       method: 'POST',
       headers: new Headers({
@@ -29,66 +23,67 @@ class AddProject extends Component {
       }),
       body: JSON.stringify(this.state),
     };
-    fetch(`http://localhost:5000/projects/add?name=${project.name}&description=${project.description}&image_1=${project.image_1}`, config)
+    fetch(`http://localhost:5000/projects/add?name=${this.state.name}&description=${this.state.description}&image_1=${this.state.image_1}`, config)
       .then(response => response.JSON.stringify())
-      .then( response =>{
-        if(response.data.status == 200){
-          return alert('project is added !! ')
-          }else{
-            alert('problem with the add');
-          }
-        })
-        
-        .catch(function (error) {
-          console.log(error);
-        });
-      console.log('added  ' + 'name: ' + this.state.name + '  description: ' + this.state.description + '  image: ' +  this.state.image_1)
-    // this.props.history.push('/');
+      // .then(response => {
+      //   if (response.status == 200) {
+      //     // return alert('project is added !! ')
+      //     this.props.history.push('/');
+      //   } else {
+      //     alert('problem with the add');
+      //   }
+      // })
+
+      .catch(function (error) {
+        console.log(error);
+      });
+    console.log('added  ' + 'name: ' + this.state.name + '  description: ' + this.state.description + '  image: ' + this.state.image_1)
   }
+
 
   updateName = (event) => {
     this.setState({
-      project: { ...this.state, name: event.currentTarget.value }
+      name: event.target.value
     })
   }
   updateDescription = (event) => {
     this.setState({
-      project: { ...this.state, description: event.currentTarget.value }
+      description: event.target.value
     })
   }
   updateImage = (event) => {
     this.setState({
-      project: { ...this.state, image_1: event.currentTarget.value }
+      image_1: event.target.value
     })
   }
 
 
-  handelSubmit = (event) => {
-    let MYJSON = JSON.stringify(this.state, 1, 2, 3);
-    return alert('Look your console' + console.log({ MYJSON }))
-    { console.log('image:' + this.state.image_1) }
-    { console.log('name:' + this.state.name) }
-    { console.log('description:' + this.state.description) }
-  }
+  // handelSubmit = (event) => {
+  //   let MYJSON = JSON.stringify(this.state, 1, 2, 3);
+  //   return alert('Look your console' + console.log({ MYJSON }))
+
+  // }
 
 
   render() {
 
     return (
       <div className={'project-add'}>
+        {console.log('image:' + this.state.image_1)}
+        {console.log('name:' + this.state.name)}
+        {console.log('description:' + this.state.description)}
         <h1>Add project</h1>
         <input
           value={this.state.name}
           onChange={this.updateName.bind(this)} />
         <input
-          value={this.state.descritpion}
+          value={this.state.description}
           onChange={this.updateDescription.bind(this)} />
         <input
-          name="image_1'"
           value={this.state.image_1}
           onChange={this.updateImage.bind(this)} />
         <button type="submit" onClick={this.addProduct}>SENT</button>
-        <button onClick={this.handelSubmit}>envoyer console</button>
+        {/* <button onClick={this.handelSubmit}>envoyer console</button> */}
       </div>
     )
   }
