@@ -1,12 +1,14 @@
 import React from 'react'
+import ProjectList from './ProjectsList/index'
 
-
-class Home extends React.Component {
+class Project extends React.Component {
   render() {
     return (
       <div>
         <div className={'container home'}>
           <div className={"content"}>
+            <h2>Projects</h2>
+
             <div className={"float-bull"}>
               <div className={"bull-1"}></div>
               <div className={"bull-2"}></div>
@@ -19,22 +21,9 @@ class Home extends React.Component {
               <li><a href="contact.html"></a></li>
             </ul>
 
-            <div className={"title-links"}>
-              <span class='title'>
-                <h1>MASAMBA<br />AUDREY </h1>
-                <h2>DESIGN/FRONTED JUNIOR</h2>
-              </span>
+            <div className={"project-content"}>
+              <ProjectList/>
             </div>
-
-            <ul className={"links"}>
-              <li><a href="https://www.linkedin.com/in/audreymasamba/" target="_blank">LINKEDIN</a></li>
-              <li><a href="https://github.com/AudreyMas?tab=repositories" target="_blank">GITHUB</a></li>
-              <li>
-                <input type="text" value="masambaaudrey1@gmail.com" id="myInput" />
-                <a onclick="myFunction()">MAIL</a>
-              </li>
-              <li><a href="../assets/img/cv-Masamba_Audrey.pdf" target="_blank">CV</a></li>
-            </ul>
 
             <div className={"footer"}>
               <a href="mailto:masambaaudrey1@gmail.com" target="_blank">2019©masambaaudrey1@gmail.com</a>
@@ -47,4 +36,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default Project

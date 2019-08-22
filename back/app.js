@@ -50,6 +50,26 @@ app.post('/projects/add', (req,res)=>{
   });
 });
 
+app.delete('/projects/delete/:id', (req, res) => {
+  // récupération des données envoyées
+  const idEmployee = req.params.id;
+  const {name} = req.query;
+
+  // connexion à la base de données, et suppression de l'employé
+  connection.query('DELETE FROM projects WHERE id = ?', [name], err => {
+
+    if (err) {
+      // Si une erreur est survenue, alors on informe l'utilisateur de l'erreur
+      console.log(err);
+      res.status(500).send("Delete ERROR");
+    } else {
+
+      // Si tout s'est bien passé, on envoie un statut "ok".
+      res.sendStatus(200);
+    }
+  });
+});
+
 
 //je lance le serveur node
 let server = app.listen(process.env.PORT || 5000, function () {

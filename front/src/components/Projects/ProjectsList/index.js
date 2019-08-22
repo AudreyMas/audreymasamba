@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 class ProjectList extends Component {
-  
+
   constructor(props) {
     super(props)
     this.state = {
@@ -13,27 +13,29 @@ class ProjectList extends Component {
     this.getProjects();
   }
 
-  getProjects () {
+  getProjects() {
     fetch('http://localhost:5000/projects', {
-    },)
+    })
       .then(response => response.json())
       .then(res =>
         this.setState({
           projects: res.data
         })
-        )
+      )
       .catch(err => console.error(err))
   }
 
 
   render() {
-   const {projects} = this.state;
+    const { projects } = this.state;
     let listProjects = projects.map((item, index) => (
-     <li key={index}>
-     <div>{item.name}</div>
-     <div>{item.description}</div>
-     <img src={item.image_1} alt='imageProject'/>
-     </li>
+      <li key={index}>
+        <div>{item.name}</div>
+        <div>{item.description}</div>
+        <div className={'img'}>
+          <img src={item.image_1} alt='imageProject' />
+        </div>
+      </li>
     ))
 
     return (

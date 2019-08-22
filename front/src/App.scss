@@ -4,7 +4,7 @@
   src: url("assets/fonts/IMPACT.TTF") format("ttf");
 }
 * {
-  color :gray;
+  color: gray;
 }
 a {
   text-decoration: none;
@@ -36,11 +36,19 @@ body {
       height: 100vh;
       display: flex;
       flex-direction: column;
+      z-index: 2;
       &:not(.form) {
         align-content: space-between;
         justify-content: space-between;
       }
-      z-index: 2;
+      .img {
+        width: 200px;
+        height: 300px;
+        img {
+          width: 100%;
+        }
+      }
+
       .title-links,
       .links,
       .footer,
@@ -200,7 +208,7 @@ body {
 
     //SIGNUP
     .content.form {
-      justify-content: center!important;
+      justify-content: center !important;
       align-items: center;
     }
   }

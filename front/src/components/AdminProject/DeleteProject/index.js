@@ -23,7 +23,7 @@ class AddProject extends Component {
 
     const { project } = this.state
     const config = {
-      method: 'POST',
+      method: 'DELETE',
       headers: new Headers({
         'Content-Type': 'application/json'
       }),
@@ -87,7 +87,7 @@ class AddProject extends Component {
           name="image_1'"
           value={this.state.image_1}
           onChange={this.updateImage.bind(this)} />
-        <button type="submit" onClick={this.addProduct}>SENT</button>
+        <button type="submit" onClick={this.addProduct}>DELETE</button>
         <button onClick={this.handelSubmit}>envoyer console</button>
       </div>
     )
