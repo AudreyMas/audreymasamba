@@ -74,11 +74,11 @@ app.put('/projects/update/:id', (req, res) => {
 
 app.delete('/projects/delete/:id', (req, res) => {
   // récupération des données envoyées
-  const idProject = req.params.id;
-  // const {name} = req.query;
+  const id = req.params.id;
+  // const {id} = req.query;
 
   // connexion à la base de données, et suppression de l'employé
-  connection.query('DELETE FROM projects WHERE id = ?', [idProject], err => {
+  connection.query('DELETE FROM projects WHERE id = ?', [id], err => {
 
     if (err) {
       // Si une erreur est survenue, alors on informe l'utilisateur de l'erreur
