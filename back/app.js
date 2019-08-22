@@ -39,8 +39,8 @@ app.get('/projects', (req, res) => {
 });
 
 app.post('/projects/add', (req,res)=>{
-  const {name,description} = req.query;
-  const INSERT_PROJECT =`INSERT INTO projects (name, description) VALUE('${name}','${description}')`
+  const {name,description, image_1} = req.query;
+  const INSERT_PROJECT =`INSERT INTO projects (name, description, image_1) VALUE('${name}','${description}','${image_1}')`
   connection.query(INSERT_PROJECT, (err, results) => {
     if (err) {
       return res.send(err)

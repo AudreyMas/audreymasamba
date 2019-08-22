@@ -38,7 +38,6 @@ class SignUp extends Component {
   render() {
 
     return (
-
       <div className='container'>
         <div className='content form'>
           <h1>Hello : {this.state.name} <br /></h1>

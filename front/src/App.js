@@ -4,6 +4,7 @@ import './App.scss';
 import Home from './components/Home/index.js';
 import SignUp from './components/SignUp/index';
 import ProjectList from './components/ProjectsList/index';
+import AdminProject from './components/AdminProject/index'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/projects" component={ProjectList} />
+          <Route exact path="/project-admin" component={AdminProject} />
 
 
         </Switch>

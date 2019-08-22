@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
+import AddProject from './AddProject/index'
 
-class ProjectList extends Component {
-  
+class AdminProject extends Component {
   constructor(props) {
     super(props)
     this.state = {
       projects: [],
     }
   }
-
   componentDidMount() {
     this.getProjects();
   }
@@ -25,25 +24,22 @@ class ProjectList extends Component {
       .catch(err => console.error(err))
   }
 
-
   render() {
-   const {projects} = this.state;
-    let listProjects = projects.map((item, index) => (
-     <li key={index}>
-     <div>{item.name}</div>
-     <div>{item.description}</div>
-     <img src={item.image_1} alt='imageProject'/>
-     </li>
+    const {projects} = this.state;
+    let nameProject = projects.map((item, index) => (
+     <li key={index}>{item.name}</li>
     ))
 
     return (
-      <div className={'project-list'}>
-        <ul>
-          {listProjects}
+      <div className={'container'}>
+        <h1>Manage my projects</h1>
+        
+        <ul className={'projects-list'}>
+          {nameProject}
         </ul>
+        <AddProject />
       </div>
     )
   }
-
 }
-export default ProjectList;
+export default AdminProject;
