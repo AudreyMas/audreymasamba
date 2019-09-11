@@ -50,27 +50,27 @@ app.post('/projects/add', (req,res)=>{
   });
 });
 
-// écoute de l'url "/api/employees"
-app.put('/projects/update/:id', (req, res) => {
+// // écoute de l'url "/api/employees"
+// app.put('/projects/update/:id', (req, res) => {
 
-  // récupération des données envoyées
-  const idProject = req.params.id;
-  const formData = req.body;
+//   // récupération des données envoyées
+//   const idProject = req.params.id;
+//   const formData = req.body;
 
-  // connection à la base de données, et insertion de l'employé
-  connection.query('UPDATE movie SET ? WHERE id = ?', [formData, idProject], err => {
+//   // connection à la base de données, et insertion de l'employé
+//   connection.query('UPDATE movie SET ? WHERE id = ?', [formData, idProject], err => {
 
-    if (err) {
-      // Si une erreur est survenue, alors on informe l'utilisateur de l'erreur
-      console.log(err);
-      res.status(500).send("Update ERROR");
-    } else {
+//     if (err) {
+//       // Si une erreur est survenue, alors on informe l'utilisateur de l'erreur
+//       console.log(err);
+//       res.status(500).send("Update ERROR");
+//     } else {
 
-      // Si tout s'est bien passé, on envoie un statut "ok".
-      res.sendStatus(200);
-    }
-  });
-});
+//       // Si tout s'est bien passé, on envoie un statut "ok".
+//       res.sendStatus(200);
+//     }
+//   });
+// });
 
 app.delete('/projects/delete/:id', (req, res) => {
   // récupération des données envoyées
