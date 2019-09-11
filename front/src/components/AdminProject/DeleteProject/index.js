@@ -1,24 +1,15 @@
 import React, { Component } from 'react';
 
-class AddProject extends Component {
+class DeleteProject extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      // projects: [],
-      project: [
-    
-        { name: '' },
-        { descritpion: '' }, 
-        {
-          image_1: ''
-        },
-      ]
-
+      id: 0
     }
   }
 
-  addProduct = (event) => {
+  deleteProject = (event) => {
     event.preventDefault();
 
     const { project } = this.state
@@ -29,38 +20,23 @@ class AddProject extends Component {
       }),
       body: JSON.stringify(this.state),
     };
-    fetch(`http://localhost:5000/projects/add?name=${project.name}&description=${project.description}&image_1=${project.image_1}`, config)
+    fetch(`/projects/delete/${project.id}`, config)
       .then(response => response.JSON.stringify())
-      .then( response =>{
-        if(response.data.status == 200){
+      .then(response => {
+        if (response.data.status == 200) {
           return alert('project is added !! ')
-          }else{
-            alert('problem with the add');
-          }
-        })
-        
-        .catch(function (error) {
-          console.log(error);
-        });
-      console.log('added  ' + 'name: ' + this.state.name + '  description: ' + this.state.description + '  image: ' +  this.state.image_1)
+        } else {
+          alert('problem with the add');
+        }
+      })
+
+      .catch(function (error) {
+        console.log(error);
+      });
+    console.log('added  ' + 'name: ' + this.state.id  + '  description: ' + this.state.description + '  image: ' + this.state.image_1)
     // this.props.history.push('/');
   }
 
-  updateName = (event) => {
-    this.setState({
-      project: { ...this.state, name: event.currentTarget.value }
-    })
-  }
-  updateDescription = (event) => {
-    this.setState({
-      project: { ...this.state, description: event.currentTarget.value }
-    })
-  }
-  updateImage = (event) => {
-    this.setState({
-      project: { ...this.state, image_1: event.currentTarget.value }
-    })
-  }
 
 
   handelSubmit = (event) => {
@@ -76,21 +52,11 @@ class AddProject extends Component {
 
     return (
       <div className={'project-add'}>
-        <h1>Add project</h1>
-        <input
-          value={this.state.name}
-          onChange={this.updateName.bind(this)} />
-        <input
-          value={this.state.descritpion}
-          onChange={this.updateDescription.bind(this)} />
-        <input
-          name="image_1'"
-          value={this.state.image_1}
-          onChange={this.updateImage.bind(this)} />
-        <button type="submit" onClick={this.addProduct}>DELETE</button>
+        <h1>DeleteProject</h1>
+        <button type="submit" onClick={this.deleteProject}>DELETE</button>
         <button onClick={this.handelSubmit}>envoyer console</button>
       </div>
     )
   }
 }
-export default AddProject;
+export default DeleteProject;

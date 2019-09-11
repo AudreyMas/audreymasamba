@@ -12,7 +12,7 @@ class AddProject extends Component {
     }
   }
 
-  addProduct = (event) => {
+  addProject = (event) => {
     event.preventDefault();
 
     // const { project } = this.state
@@ -82,7 +82,7 @@ class AddProject extends Component {
         <input
           value={this.state.image_1}
           onChange={this.updateImage.bind(this)} />
-        <button type="submit" onClick={this.addProduct}>SENT</button>
+        <button type="submit" onClick={this.addProject}>SENT</button>
         {/* <button onClick={this.handelSubmit}>envoyer console</button> */}
       </div>
     )
