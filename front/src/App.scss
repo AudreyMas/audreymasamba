@@ -6,6 +6,9 @@
 * {
   color: gray;
 }
+*:not(.float-bull){
+z-index: 1;
+}
 a {
   text-decoration: none;
   color: white;

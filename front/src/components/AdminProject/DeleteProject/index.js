@@ -33,7 +33,7 @@ class DeleteProject extends Component {
       .catch(function (error) {
         console.log(error);
       });
-    console.log('added  ' + 'name: ' + this.state.id  + '  description: ' + this.state.description + '  image: ' + this.state.image_1)
+    console.log('deleteted  ' + 'name' + this.state.name + 'id: ' + this.state.id  + '  description: ' + this.state.description + '  image: ' + this.state.image_1)
     // this.props.history.push('/');
   }
 

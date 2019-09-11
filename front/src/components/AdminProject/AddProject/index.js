@@ -75,12 +75,15 @@ class AddProject extends Component {
         <h1>Add project</h1>
         <input
           value={this.state.name}
+          placeholder="name"
           onChange={this.updateName.bind(this)} />
         <input
           value={this.state.description}
+          placeholder="description"
           onChange={this.updateDescription.bind(this)} />
         <input
           value={this.state.image_1}
+          placeholder="picture"
           onChange={this.updateImage.bind(this)} />
         <button type="submit" onClick={this.addProject}>SENT</button>
         {/* <button onClick={this.handelSubmit}>envoyer console</button> */}
