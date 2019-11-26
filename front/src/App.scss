@@ -30,7 +30,8 @@ body {
 
   .container {
     /* background-image: radial-gradient(#3e1b91 15%, #291262 60%); */
-    background: url("assets/img/bkg.jpg");
+    // background: url("assets/img/bkg.jpg");
+    background-color:#000000;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -164,6 +165,10 @@ body {
         overflow: hidden;
         height: 100%;
         width: 100%;
+        div{
+          background-color: #000000;
+          border: solid white 46px;
+        }
         .bull-1,
         .bull-2,
         .bull-3 {
@@ -198,7 +203,8 @@ body {
           width: 20em;
           height: 20em;
           position: absolute;
-          left: 67vw;
+          // left: 67vw;
+          left:74vw;
           top: 8vh;
           animation: float-1 3s ease-in-out infinite;
           @media screen and (min-width: 768px) {

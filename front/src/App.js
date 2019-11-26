@@ -18,9 +18,6 @@ function App() {
           {/* <Route exact path="/projects" component={ProjectList} /> */}
           <Route exact path="/project-admin" component={AdminProject} />
           <Route exact path="/projects" component={Projects} />
-
-
-
         </Switch>
       </div>
     </BrowserRouter>
