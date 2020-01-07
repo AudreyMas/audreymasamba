@@ -5,9 +5,13 @@ class Project extends React.Component {
   render() {
     return (
       <div>
-        <div className={'container home'}>
-          <div className={"content"}>
-            <h2>Projects</h2>
+        <div className={"container"}>
+          <div className={"content projects"}>
+            <div className={"title-links"}>
+              <span className={"title"}>
+                <h2>Projects</h2>
+              </span>
+            </div>
 
             <div className={"float-bull"}>
               <div className={"bull-1"}></div>
@@ -22,7 +26,7 @@ class Project extends React.Component {
             </ul>
 
             <div className={"project-content"}>
-              <ProjectList/>
+              <ProjectList />
             </div>
 
             <div className={"footer"}>

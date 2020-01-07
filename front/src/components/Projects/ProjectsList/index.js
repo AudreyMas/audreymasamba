@@ -31,8 +31,10 @@ class ProjectList extends Component {
     const { projects } = this.state;
     let listProjects = projects.map((item, index) => (
       <li key={index}>
-        <div>{item.name}</div>
-        <div>{item.description}</div>
+        <div className={"title"}>
+          <h1>{item.name}</h1>
+        </div>
+        <div className={'description'}>{item.description}</div>
         <div className={'img'}>
           <img src={item.image_1} alt='imageProject' />
         </div>

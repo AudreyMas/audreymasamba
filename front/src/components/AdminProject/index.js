@@ -97,7 +97,7 @@ class AdminProject extends Component {
     fetch(`http://localhost:5000/projects/delete/${indexof}`, config)
       .then(response => response.JSON.stringify())
       .then(response => {
-        if (response.data.status == 200) {
+        if (response.data.status === 200) {
           return alert('id is deleted !! ')
         } else {
           alert('delete error');

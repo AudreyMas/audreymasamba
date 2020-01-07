@@ -6,8 +6,8 @@
 * {
   color: gray;
 }
-*:not(.float-bull){
-z-index: 1;
+*:not(.float-bull) {
+  z-index: 1;
 }
 a {
   text-decoration: none;
@@ -27,11 +27,12 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   color: #fff;
+  overflow: hidden;
 
   .container {
-    /* background-image: radial-gradient(#3e1b91 15%, #291262 60%); */
-    // background: url("assets/img/bkg.jpg");
-    background-color:#000000;
+    background-image: radial-gradient(#3e1b91 15%, #291262 60%);
+    background: url("assets/img/bkg.jpg");
+    // background-color:#000000;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -46,8 +47,9 @@ body {
         justify-content: space-between;
       }
       .img {
-        width: 200px;
-        height: 300px;
+        // width: 200px;
+        // height: 300px;
+        position: absolute;
         img {
           width: 100%;
         }
@@ -73,6 +75,30 @@ body {
           height: 30px;
           border-radius: 15px;
           margin-top: 1em;
+          display: flex;
+          align-items: center;
+          &:hover {
+            cursor: pointer;
+            background-color: #000;
+          }
+          a {
+            margin-left: 3em;
+            font-style: bold;
+            color: #7f7d7d;
+            font-weight: bold;
+          }
+        }
+      }
+      &.projects {
+        .title-links {
+          display: flex;
+          justify-content: flex-start;
+          margin-right: auto;
+          height: auto;
+        }
+        .title {
+          margin-top: 0em !important;
+          padding: 2em;
         }
       }
       .title-links {
@@ -165,9 +191,9 @@ body {
         overflow: hidden;
         height: 100%;
         width: 100%;
-        div{
-          background-color: #000000;
-          border: solid white 46px;
+        div {
+          // background-color: #000000;
+          // border: solid white 46px;
         }
         .bull-1,
         .bull-2,
@@ -204,7 +230,7 @@ body {
           height: 20em;
           position: absolute;
           // left: 67vw;
-          left:74vw;
+          left: 74vw;
           top: 8vh;
           animation: float-1 3s ease-in-out infinite;
           @media screen and (min-width: 768px) {
