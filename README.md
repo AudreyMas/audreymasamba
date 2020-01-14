@@ -1,7 +1,5 @@
-# audreymasamba- 
+# audreymasamba - In progress 
 https://audreymas.github.io/portfolio/
 
-In progress 
-
-features:
-* An admin part with authentification : ADD - DELETE - UPDATED a project
+Features:
+* An admin part with authentification to ADD, DELETE and UPDATED a project
