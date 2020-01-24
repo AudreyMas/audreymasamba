@@ -3,10 +3,10 @@
 Features:
 * An admin part to ADD, DELETE and UPDATED a project
 
-![Screenshot](1.JPG)
-![Screenshot](2.JPG)
-![Screenshot](3.JPG)
-![Screenshot](4.JPG)
+![Screenshot](1.jpg)
+![Screenshot](2.jpg)
+![Screenshot](3.jpg)
+![Screenshot](4.jpg)
 
 
 
