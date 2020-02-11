@@ -206,7 +206,7 @@ body .container .content .title-links .title h1, body .container .content .title
 }
 body .container .content .title-links .title h1 {
   color: #fff;
-  font-size: 16vw;
+  font-size: 13vw;
   margin: 0px 0px 0.2em 0px;
   letter-spacing: 0.5rem;
 }
@@ -219,7 +219,7 @@ body .container .content .title-links .title h1 {
 }
 body .container .content .title-links .title h2 {
   color: #9b9797;
-  font-size: 6vw;
+  font-size: 4vw;
   letter-spacing: 0.27rem;
   font-weight: lighter;
 }
@@ -533,12 +533,16 @@ body .container .content.projects .list-project .thelist li {
   width: fit-content;
 }
 body .container .content.projects .list-project .thelist li p {
-  font-size: 16px;
+  font-size: 14px;
   color: white;
+}
+@media screen and (min-width: 768px) {
+  body .container .content.projects .list-project .thelist li p {
+    font-size: 16px;
+  }
 }
 body .container .content.projects .list-project .thelist li .title {
   font-size: 1.5em;
-  letter-spacing: 15px;
   margin-top: 3em;
   width: fit-content;
 }
@@ -550,12 +554,18 @@ body .container .content.projects .list-project .thelist li .title h1 {
   text-transform: uppercase;
   color: white;
   transition: all 1s ease-out;
-  width: fit-content;
-  font-size: 2em;
+  width: 72vw;
+  letter-spacing: 3px;
+
+  font-size: 36px;
 }
 @media screen and (min-width: 768px) {
   body .container .content.projects .list-project .thelist li .title h1 {
     font-size: 2.5em;
+    width: fit-content;
+    letter-spacing: 15px;
+
+
   }
 }
 body .container .content.projects .list-project .thelist li .title h1::first-letter {
