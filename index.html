@@ -1,65 +1,66 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="eng">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Audrey Masamba frontend and design developer, develop and create project with react js, html, css, scss, photoshop, illustrator, Adobe XD, ..." />
-
-
-  <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <title>Masamba Audrey | portfolio </title>
+    <meta name="description"
+        content="Masamba Audrey 1 an d'expérence en webdesign. Découvrez mon portfolio avec des projets réalisés au sein de RTL BELGIUM, ONE4YOU, MEDIA ANIMATION,...">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Portfolio| Audrey Masamba</title>
+    <!-- link styles -->
+    <link href="assets/style.css" rel="stylesheet">
+    <!-- link favcion -->
+    <link rel="icon" type="image/png" href="img/favicon.png" />
 </head>
 
 <body>
-  <div class="container">
-    <div class="content">
-      <ul class="menu-btns">
-        <li><a class="btn-menu" href="home.html"></a></li>
-        <li><a href="projects.html"></a></li>
-        <li><a href="contact.html"></a></li>
-      </ul>
-      <div class="title-links">
-        <span class='title'>
-          <h1>MASAMBA </br>
-            AUDREY
-          </h1>
-          <h2>DESIGN/FRONTED JUNIOR</h2>
-        </span>
+    <div class="container">
+        <div class=" home">
 
-      </div>
-      <ul class="links">
-        <li><a href="https://www.linkedin.com/in/audreymasamba/" target="_blank">LINKEDIN</a></li>
-        <li><a href="https://github.com/AudreyMas?tab=repositories" target="_blank">GITHUB</a></li>
-        <li>
-          <input type="text" value="masambaaudrey1@gmail.com" id="myInput">
-          <a onclick="myFunction()">MAIL</a>
-        </li>
-        <li><a href="img/cv-Masamba_Audrey.pdf" target="_blank">CV</a></li>
-      </ul>
-      <div class="footer">
-        <a href="mailto:masambaaudrey1@gmail.com" target="_blank">2019©masambaaudrey1@gmail.com</a>
-      </div>
-      <div class="float-bull">
-        <div class="bull-1"></div>
-        <div class="bull-2"></div>
-        <div class="bull-3"></div>
-      </div>
+            <div class="content">
+                <div class="float-bull">
+                    <div class="bull-1"></div>
+                    <div class="bull-2"></div>
+                    <div class="bull-3"></div>
+                </div>
 
+                <div class="bkg-dark"></div>
+
+                <div class="title-links">
+                    <ul class="menu-btns">
+                        <li><a href="#"><span lass="btn-menu"></span>Home</span></a></li>
+                        <li><a href="assets/html/projects.html"><span lass="btn-menu">Projects</span></a></li>
+                        <li><a href="assets/html/contact.html"><span lass="btn-menu">About/Contact</span></a></li>
+                      </ul>
+
+                    <span class='title'>
+                        <h1><span class="black-word">AU</span><span class="space-name">DREY</span><br /> <span
+                                class="black-word">MA</span>SAMBA</h1>
+                        <h2>DESIGN/FRONTED JUNIOR</h2>
+                    </span>
+                </div>
+
+                <ul class="links">
+                    <li><a href="https://www.linkedin.com/in/audreymasamba/" target="_blank">LINKEDIN</a></li>
+                    <li><a href="https://github.com/AudreyMas?tab=repositories" target="_blank">GITHUB</a></li>
+                    <li>
+                        <!-- <input ref=(mail) => this.mail = mail type="text" value="masambaaudrey1@gmail.com" id="myInput" /> -->
+                        <a onClick=this.copyMail>MAIL</a>
+                    </li>
+                    <li><a href="assets/img/cv-Masamba_Audrey.pdf" target="_blank">CV</a></li>
+                </ul>
+
+                <Footer>
+                    <a href="mailto:masambaaudrey1@gmail.com" target="_blank">2020 © masambaaudrey1@gmail.com</a>
+
+                </Footer>
+
+            </div>
+        </div>
     </div>
-
-  </div>
-  <!-- SCRIPTS -->
-  <!-- copy mail -->
-  <script>
-    function myFunction() {
-      var copyText = document.getElementById("myInput");
-      copyText.select();
-      document.execCommand("copy");
-      alert("Copied the text: " + copyText.value);
-    }
-  </script>
+    <noscript>Your browser does not support JavaScript!</noscript>
 </body>
 
 </html>
