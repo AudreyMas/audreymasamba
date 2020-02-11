@@ -46,8 +46,8 @@ body .container .content:not(.form) {
   justify-content: space-between;
 }
 body .container .content .bkg-dark {
-  width: 100vw;
-  height: 58vh;
+  width: 85vw;
+    height: 100vh;
   background-color: #1a1919;
   position: absolute;
   right: 0;
@@ -55,26 +55,31 @@ body .container .content .bkg-dark {
 @media screen and (min-width: 768px) {
   body .container .content .bkg-dark {
     width: 58vw;
-    height: 100vh;
+    /* height: 100vh;
     background-color: #1a1919;
     position: absolute;
-    right: 0;
+    right: 0; */
   }
 }
 body .container .content .title-links, body .container .content .links, body .container .content footer, body .container .content .menu-btns {
   z-index: 1;
 }
 body .container .content .menu-btns {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  margin-left: 2%;
+
 }
 @media screen and (min-width: 768px) {
   body .container .content .menu-btns {
     height: 240px;
     width: 400px;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    position: absolute;
+    position: absolute; */
     top: 28vh;
     margin-left: 2em;
   }
@@ -111,7 +116,11 @@ body .container .content .title-links {
   height: 85%;
 }
 body .container .content .title-links .title {
-  text-align: center;
+  /* text-align: center; */
+    text-align: right;
+    width: 82vw;
+    margin-left: auto;
+    padding-right: 1%;
 }
 @media screen and (min-width: 768px) {
   body .container .content .title-links .title {
@@ -119,6 +128,8 @@ body .container .content .title-links .title {
     margin-left: auto;
     margin-top: 9em;
     width: 58vw;
+    padding-right: 0em;
+
   }
 }
 body .container .content .title-links .title .black-word {
