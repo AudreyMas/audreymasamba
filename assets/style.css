@@ -34,6 +34,7 @@ body .container .home{
   overflow-x: hidden;
   overflow-y: hidden;
 }
+
 body .container .content {
   height: 100vh;
   display: flex;
@@ -49,20 +50,28 @@ body .container .content:not(.form) {
   align-content: space-between;
   justify-content: space-between;
 }
+body .container .projects  {
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  body .container .home .content:not(.form) {
+  align-items: center;  
+  }
+}
 body .container .content .bkg-dark {
   width: 85vw;
-    height: 100vh;
+  height: 100vh;
   background-color: #1a1919;
   position: absolute;
+  /* right: 0; */
+}
+.projects .bkg-dark{
   right: 0;
 }
 @media screen and (min-width: 768px) {
-  body .container .content .bkg-dark {
+  body .container .content .bkg-dark, body .container .home .content .bkg-dark {
     width: 58vw;
-    /* height: 100vh;
-    background-color: #1a1919;
-    position: absolute;
-    right: 0; */
+    right: 0;
   }
 }
 body .container .content .title-links, body .container .content .links, body .container .content footer, body .container .content .menu-btns {
@@ -81,6 +90,16 @@ body .container .content .menu-btns {
   background-color: #1a1919;
 }
 
+@media screen and (max-width: 768px) {
+
+body .container .home .content .menu-btns {
+ 
+  margin-left: 0;
+  right: 0;
+  width: 100vw;
+  background-color: #1a191900;
+}
+}
   
 
 @media screen and (min-width: 768px) {
@@ -168,6 +187,13 @@ body .container .content .title-links .title {
     margin-left: auto;
     padding-right: 1%;
 }
+@media screen and (max-width: 768px) {
+  body .container .content .title-links .title {
+    width: 80vw;
+    margin-right: auto;
+    padding-right: 0;
+  }
+}
 @media screen and (min-width: 768px) {
   body .container .content .title-links .title {
     text-align: left;
@@ -237,6 +263,16 @@ body .container .content .links {
   margin-left: auto;
   justify-content: center;
   padding-right: 2%;
+}
+@media screen and (max-width: 768px) {
+
+body .container .home .content .links {
+
+  width: 85vw;
+  margin-left: auto;
+  padding-right:0;
+  margin-right: auto;
+}
 
 }
 @media screen and (min-width: 768px) {
@@ -402,9 +438,15 @@ body .container .content.admin .projects-list ul {
   align-items: center;
 }
 body .container .content.projects .bull-3 {
-  animation: float-1 6s ease-in-out infinite;
-  left: 100px;
+  left: 0px;
 }
+@media screen and (min-width: 768px) {
+  body .container .content.projects .bull-3 {
+    animation: float-1 6s ease-in-out infinite;
+    left: 100px;
+  }
+}
+
 body .container .content.projects .bkg-dark {
   width: 85vw;
   height: 100vh;
@@ -480,19 +522,17 @@ body .container .content.projects .list-project .thelist {
   padding-top: 1em;
   padding-bottom: 1em;
   overflow-y: scroll;
-  height: 90vh;
+  height: 73vh;
   overflow-x: hidden;
-  margin-left: auto;
-  width: 80vw;
+  margin-left: 9vw;
+  width: 91vw;
 }
 @media screen and (min-width: 768px) {
   body .container .content.projects .list-project .thelist {
-    /* padding-top: 1em;
-    padding-bottom: 1em;
-    overflow-y: scroll; */
-    /* height: 90vh; */
-    /* overflow-x: hidden; */
     margin-left: -33px;
+    width: 80vw;
+    height: 90vh;
+
   }
 
 }
@@ -531,6 +571,7 @@ body .container .content.projects .list-project .thelist ::-webkit-scrollbar-cor
 }
 body .container .content.projects .list-project .thelist li {
   width: fit-content;
+  padding-right: 3%;
 }
 body .container .content.projects .list-project .thelist li p {
   font-size: 14px;
@@ -555,27 +596,24 @@ body .container .content.projects .list-project .thelist li .title h1 {
   color: white;
   transition: all 1s ease-out;
   width: 72vw;
-  letter-spacing: 3px;
-
+  letter-spacing: 15px;
   font-size: 36px;
+  text-shadow: 2px 2px 5px #7e7c7cc4;
 }
 @media screen and (min-width: 768px) {
   body .container .content.projects .list-project .thelist li .title h1 {
     font-size: 2.5em;
     width: fit-content;
-    letter-spacing: 15px;
-
-
   }
 }
 body .container .content.projects .list-project .thelist li .title h1::first-letter {
-  color: #fff;
+  color: black;
 }
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   body .container .content.projects .list-project .thelist li .title h1::first-letter {
     color: black;
   }
-}
+} */
 body .container .content.projects .list-project .thelist li .title h1:hover, body .container .content.projects .list-project .thelist li .title h1:active, body .container .content.projects .list-project .thelist li .title h1:visited {
   color: white !important;
   margin-left: 46px;
