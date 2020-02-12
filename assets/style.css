@@ -696,15 +696,19 @@ body .container .content.projects-detail .list-images {
   display: flex;
   flex-direction: column;
   background-color: white;
-  width: 90vw;
+  width: 85vw;
   justify-content: center;
   align-items: center;
-  padding: 1em;
+  padding: 2em;
   margin-top: 65vh;
 }
-body .container .content.projects-detail .list-images a {
+
+a.btn-newsletter {
   color: #1a1919;
-  width: fit-content;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 2px 4px 9px -5px #000000;
+    font-weight: 600;
 }
 body .container .content.projects-detail .list-images a:after {
   background: none repeat scroll 0 0 transparent;
