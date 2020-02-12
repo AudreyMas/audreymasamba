@@ -40,6 +40,7 @@ body .container .content {
   display: flex;
   flex-direction: column;
   z-index: 2;
+  overflow-x: hidden;
 }
 @media screen and (min-width: 768px) {
   body .container .content {
@@ -88,22 +89,19 @@ body .container .content .menu-btns {
   width: 100vw;
   height: 80px;
 }
-body .container .content.about-contact .menu-btns{
+body .container .content.about-contact .menu-btns, body .container .content.projects-detail .menu-btns {
   background-color: #1a1919;
 }
-
 @media screen and (max-width: 768px) {
 body .container .home .content .menu-btns {
-  margin-left: 0;
-  right: 0;
-  width: 100vw;
-  background-color: #1a191900;
+    margin-left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: #1a191900;
+  }
 }
-}
-  
-
 @media screen and (min-width: 768px) {
-  body .container .content .menu-btns {
+  body .container .content .menu-btns, .content.about-contact .menu-btns {
     height: 240px;
     width: 400px;
     display: flex;
@@ -112,7 +110,7 @@ body .container .home .content .menu-btns {
     top: 28vh;
     margin-left: 2em;
     left: 0;
-    background-color: #1a191900;
+    background-color: #1a191900!important;
   }
 }
 body .container .content .menu-btns li {
@@ -140,6 +138,7 @@ body .container .content .menu-btns li {
 body .container .content .menu-btns li a {
   padding-top: 63px;
   font-size: 11px;
+  height:30px;
 }
 @media screen and (min-width: 768px) {
   body .container .content .menu-btns li a {
@@ -147,9 +146,6 @@ body .container .content .menu-btns li a {
     font-size: 14px;
   }
 }
-
-
-
 body .container .content .menu-btns li span{
   opacity: 1;
   color: white;
@@ -160,7 +156,7 @@ body .container .content .menu-btns li span{
 
   }
 }
-body .container .content .menu-btns li:hover, body .container .content .menu-btns lifocus {
+body .container .content .menu-btns li:hover, body .container .content .menu-btns li:focus {
   cursor: pointer;
   background-color: #000;
 }
@@ -222,8 +218,9 @@ body .container .content .title-links .title .space-name {
 }
 body .container .content .title-links .title h1, body .container .content .title-links .title h2 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  /* box-shadow: inset 10px 10px 5px 0px rgba(0,0,0,0.31); */
   -webkit-background-clip: text;
+  background-clip: text;
+
 }
 @media screen and (min-width: 768px) {
   body .container .content .title-links .title h1, body .container .content .title-links .title h2 {
@@ -267,13 +264,11 @@ body .container .content .links {
 @media screen and (max-width: 768px) {
 
 body .container .home .content .links {
-
-  width: 85vw;
-  margin-left: auto;
-  padding-right:0;
-  margin-right: auto;
-}
-
+    width: 85vw;
+    margin-left: auto;
+    padding-right:0;
+    margin-right: auto;
+  }
 }
 @media screen and (min-width: 768px) {
   body .container .content .links {
@@ -300,11 +295,6 @@ body .container .content .links li a {
   position: relative;
   cursor: pointer;
 }
-/* @media screen and (min-width: 768px) {
-  body .container .content .links li a {
-    color: #fff;
-  }
-} */
 body .container .content .links li a:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
@@ -317,11 +307,6 @@ body .container .content .links li a:after {
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-/* @media screen and (min-width: 768px) {
-  body .container .content .links li a:after {
-    background: #fff;
-  }
-} */
 body .container .content .links li a:hover:after {
   width: 100%;
   left: 0;
@@ -334,6 +319,8 @@ body .container .content .links input {
 }
 body .container .content footer {
   padding: 0 0 0.5em 0.5em;
+  margin-top: auto;
+  margin-right: auto;
 }
 body .container .content footer a {
   font-size: 10px;
@@ -341,6 +328,9 @@ body .container .content footer a {
   margin-bottom: 0.5em;
   color: #5e5c5c;
 }
+
+
+/* float bull */
 body .container .content .float-bull {
   position: absolute;
   overflow: hidden;
@@ -390,53 +380,10 @@ body .container .content .float-bull .bull-3 {
     height: 50em;
   }
 }
-body .container .content.admin {
-  overflow-y: scroll;
-}
-body .container .content.admin .project-add {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1em;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.3);
-}
-body .container .content.admin .project-add div {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-  width: 50%;
-}
-body .container .content.admin .project-add div input {
-  border: none;
-  margin-bottom: 1.5em;
-  border-bottom: 1.5px solid black;
-  font-size: 16px;
-}
-body .container .content.admin .project-add div .description {
-  border: 2px solid black;
-  margin-bottom: 1.5em;
-  height: 8em;
-  width: 100%;
-  overflow-y: scroll;
-}
-body .container .content.admin h2 {
-  background-color: black;
-  width: 100%;
-  text-align: center;
-  padding: 15px;
-  color: white;
-  margin-top: 0;
-}
-body .container .content.admin .projects-list ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
+
+
+/* list of projects page  */
 body .container .content.projects .bull-3 {
   left: 0px;
 }
@@ -463,6 +410,28 @@ body .container .content.projects .arrow {
   left: 62%;
   animation: float-1 1s ease-in-out infinite;
 }
+body .container .content.projects .list-project .thelist li .img-hover {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  right: 10%;
+  top: 30%;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.3);
+}
+body .container .content.projects .list-project .thelist li .img-hover img {
+  width: 150%;
+}
+@media screen and (min-width: 768px) {
+  body .container .content.projects .list-project .thelist li:hover .img-hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+}
 body .container .content.projects .list-project {
   width: 100vw;
   margin-right: auto;
@@ -476,45 +445,90 @@ body .container .content.projects .list-project {
     margin-top: auto;
   }
 }
-body .container .content.projects .list-project ::-webkit-scrollbar {
+
+/* scrollbar */
+body .container .content ::-webkit-scrollbar {
   width: 12px;
 }
-body .container .content.projects .list-project ::-webkit-scrollbar-track {
+body .container .content ::-webkit-scrollbar-track {
   display: none;
 }
-body .container .content.projects .list-project ::-webkit-scrollbar {
+body .container .content ::-webkit-scrollbar {
   width: 11px;
   height: 11px;
 }
-body .container .content.projects .list-project ::-webkit-scrollbar-button {
+body .container .content ::-webkit-scrollbar-button {
   width: 100px;
   height: 100px;
 }
-body .container .content.projects .list-project ::-webkit-scrollbar-thumb {
+body .container .content ::-webkit-scrollbar-thumb {
   background: #e1e1e1;
   border: 0px none #ffffff;
   border-radius: 100px;
 }
-body .container .content.projects .list-project ::-webkit-scrollbar-thumb:hover {
+body .container .content ::-webkit-scrollbar-thumb:hover {
   background: #ffffff;
 }
-body .container .content.projects .list-project ::-webkit-scrollbar-thumb:active {
-  background: #000000;
+body .container .content ::-webkit-scrollbar-thumb:active {
+  background: #ffff;
 }
-body .container .content.projects .list-project ::-webkit-scrollbar-track {
+body .container .content ::-webkit-scrollbar-track {
   background: #666666;
   border: 0px none #ffffff;
   border-radius: 92px;
 }
-body .container .content.projects .list-project ::-webkit-scrollbar-track:hover {
+body .container .content ::-webkit-scrollbar-track:hover {
   background: #666666;
 }
-body .container .content.projects .list-project ::-webkit-scrollbar-track:active {
+body .container .content  ::-webkit-scrollbar-track:active {
   background: #ffffff;
 }
-body .container .content.projects .list-project ::-webkit-scrollbar-corner {
+body .container .content ::-webkit-scrollbar-corner {
   background: transparent;
 }
+/* scrollbar */
+body .container ::-webkit-scrollbar {
+  width: 12px;
+}
+body .container  ::-webkit-scrollbar-track {
+  display: none;
+}
+body .container ::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+body .container ::-webkit-scrollbar-button {
+  width: 100px;
+  height: 100px;
+}
+body .container ::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 100px;
+}
+body .container ::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+body .container  ::-webkit-scrollbar-thumb:active {
+  background: #ffff;
+}
+body .container  ::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 92px;
+}
+body .container  ::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+body .container  ::-webkit-scrollbar-track:active {
+  background: #ffffff;
+}
+body .container  ::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+
+
 body .container .content.projects .list-project h1, body .container .content.projects .list-project h2 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
@@ -532,42 +546,7 @@ body .container .content.projects .list-project .thelist {
     margin-left: -33px;
     width: 80vw;
     height: 90vh;
-
   }
-
-}
-body .container .content.projects .list-project .thelist ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-}
-body .container .content.projects .list-project .thelist ::-webkit-scrollbar-button {
-  width: 100px;
-  height: 100px;
-}
-body .container .content.projects .list-project .thelist ::-webkit-scrollbar-thumb {
-  background: #e1e1e1;
-  border: 0px none #ffffff;
-  border-radius: 100px;
-}
-body .container .content.projects .list-project .thelist ::-webkit-scrollbar-thumb:hover {
-  background: #ffffff;
-}
-body .container .content.projects .list-project .thelist ::-webkit-scrollbar-thumb:active {
-  background: #000000;
-}
-body .container .content.projects .list-project .thelist ::-webkit-scrollbar-track {
-  background: #666666;
-  border: 0px none #ffffff;
-  border-radius: 92px;
-}
-body .container .content.projects .list-project .thelist ::-webkit-scrollbar-track:hover {
-  background: #666666;
-}
-body .container .content.projects .list-project .thelist ::-webkit-scrollbar-track:active {
-  background: #ffffff;
-}
-body .container .content.projects .list-project .thelist ::-webkit-scrollbar-corner {
-  background: transparent;
 }
 body .container .content.projects .list-project .thelist li {
   width: fit-content;
@@ -609,11 +588,7 @@ body .container .content.projects .list-project .thelist li .title h1 {
 body .container .content.projects .list-project .thelist li .title h1::first-letter {
   color: black;
 }
-/* @media screen and (min-width: 768px) {
-  body .container .content.projects .list-project .thelist li .title h1::first-letter {
-    color: black;
-  }
-} */
+
 body .container .content.projects .list-project .thelist li .title h1:hover, body .container .content.projects .list-project .thelist li .title h1:active, body .container .content.projects .list-project .thelist li .title h1:visited {
   color: white !important;
   margin-left: 46px;
@@ -641,37 +616,30 @@ body .container .content.projects .list-project .thelist li .description {
     width: 43em;
   }
 }
-body .container .content.projects .list-project .thelist li .popup {
-  background-color: black;
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  left: 0;
-  top: 0;
-  overflow-y: scroll;
+/* Detail project page */
+body .container .content.projects-detail {
+  background-color: #1a1919;
+  align-items: center;
+}
+body .container .content.projects-detail .header-project {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-body .container .content.projects .list-project .thelist li .popup .header-project {
-  padding-top: 4em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 62%;
+  width: auto;
+  margin-top: 90px;
   position: fixed;
 }
-body .container .content.projects .list-project .thelist li .popup .header-project h2 {
+
+body .container .content.projects-detail .header-project h2 {
   font-size: 3em;
   color: white;
   margin: 0px;
 }
-body .container .content.projects .list-project .thelist li .popup .header-project p {
+body .container .content.projects-detail .header-project p {
   margin: 3em 0;
   text-align: center;
 }
-body .container .content.projects .list-project .thelist li .popup .header-project ul {
+body .container .content.projects-detail .header-project ul {
   height: auto;
   margin: auto;
   display: flex;
@@ -679,8 +647,9 @@ body .container .content.projects .list-project .thelist li .popup .header-proje
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
 }
-body .container .content.projects .list-project .thelist li .popup .header-project ul li {
+body .container .content.projects-detail .header-project ul li {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -688,44 +657,38 @@ body .container .content.projects .list-project .thelist li .popup .header-proje
   justify-content: center;
   flex-direction: column;
 }
-body .container .content.projects .list-project .thelist li .popup .header-project ul li span {
+body .container .content.projects-detail .header-project ul li span {
   color: #e2e1e1;
 }
-body .container .content.projects .list-project .thelist li .popup .header-project ul li h4 {
+body .container .content.projects-detail .header-project ul li h4 {
   margin: 0 10px 0 0;
 }
-body .container .content.projects .list-project .thelist li .popup .header-project ul li {
+body .container .content.projects-detail .header-project ul li {
   margin: 0 2em 2em 2em;
 }
-body .container .content.projects .list-project .thelist li .popup .popup-content {
-  padding: 3em;
-  /* background-color: white; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 84%;
-  z-index: 1;
-  margin-top: 15px;
-}
-body .container .content.projects .list-project .thelist li .popup .popup-content .space{
-  height: 40vh;
-  background-color: #ffdead00;
-}
-body .container .content.projects .list-project .thelist li .popup .popup-content .list-images {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  background-color: white;
+
+body .container .content.projects-detail footer{
+  position: fixed;
+  bottom: 0;
+  background-color: black;
   width: 100%;
-  padding: 3em;
+}
+
+body .container .content.projects-detail .list-images {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 77vw;
   justify-content: center;
   align-items: center;
+  padding: 3em;
+  margin-top: 65vh;
 }
-body .container .content.projects .list-project .thelist li .popup .popup-content .list-images a {
+body .container .content.projects-detail .list-images a {
   color: #1a1919;
   width: fit-content;
 }
-body .container .content.projects .list-project .thelist li .popup .popup-content .list-images a:after {
+body .container .content.projects-detail .list-images a:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -736,52 +699,20 @@ body .container .content.projects .list-project .thelist li .popup .popup-conten
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-body .container .content.projects .list-project .thelist li .popup .popup-content .list-images a:hover:after {
+body .container .content.projects-detail .list-images a:hover:after {
   width: 100%;
   left: 0;
 }
-body .container .content.projects .list-project .thelist li .popup .popup-content .list-images img {
+body .container .content.projects-detail .list-images img {
   margin: 0 auto;
   margin-bottom: 3em;
 }
-body .container .content.projects .list-project .thelist li .popup .popup-content .list-images .img-width {
+body .container .content.projects-detail .list-images .img-width {
   width: 80%;
 }
-/* body .container .content.projects .list-project .thelist li .popup .popup-content .close {
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #fff;
-  position: fixed;
-}
-body .container .content.projects .list-project .thelist li .popup .popup-content .close:hover {
-  color: #989595;
-} */
-body .container .content.projects .list-project .thelist li .img-hover {
-  display: none;
-  position: absolute;
-  background-color: white;
-  width: 300px;
-  height: 300px;
-  border-radius: 100%;
-  right: 10%;
-  top: 30%;
-  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.3);
-}
-body .container .content.projects .list-project .thelist li .img-hover img {
-  width: 150%;
-}
-@media screen and (min-width: 768px) {
-  body .container .content.projects .list-project .thelist li:hover .img-hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-}
+
+
+/* Contact / About page */
 
 body .container .content.about-contact .float-bull {
   display: flex;
@@ -825,14 +756,13 @@ body .container .content.about-contact .links {
   width: auto;
   margin-left: 0;
   text-align: center;
+  margin-top: auto;
 }
 body .container .content.about-contact .links a {
   color: white;
 }
-body .container .content.form {
-  justify-content: center !important;
-  align-items: center;
-}
+
+/* Circle bounced */
 @keyframes float-1 {
   0% {
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.3);
@@ -861,8 +791,11 @@ body .container .content.form {
     transform: translatey(0px);
   }
 }
+
+
+/* Loading page */
 .start-loading {
-  background-color: black;
+  background-color: #1a1919;
   height: 100vh;
   display: flex;
   justify-content: center;
