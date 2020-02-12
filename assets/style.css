@@ -85,15 +85,15 @@ body .container .content .menu-btns {
   position: absolute;
   top: 0;
   right: 0;
-  width: 85vw;
+  width: 100vw;
   height: 80px;
+}
+body .container .content.about-contact .menu-btns{
   background-color: #1a1919;
 }
 
 @media screen and (max-width: 768px) {
-
 body .container .home .content .menu-btns {
- 
   margin-left: 0;
   right: 0;
   width: 100vw;
@@ -782,14 +782,7 @@ body .container .content.projects .list-project .thelist li .img-hover img {
     overflow: hidden;
   }
 }
-/* body .container .content.projects .list-project .thelist li:focus-within .popup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-body .container .content.projects .list-project .thelist li:focus-within footer {
-  color: red;
-}
+
 body .container .content.about-contact .float-bull {
   display: flex;
   justify-content: center;
@@ -801,7 +794,7 @@ body .container .content.about-contact .float-bull .bull-3 {
 }
 body .container .content.about-contact .bkg-dark {
   width: 100vw;
-  height: 29vh;
+  height: 23vh;
   bottom: 0;
 }
 body .container .content.about-contact .about {
@@ -809,17 +802,18 @@ body .container .content.about-contact .about {
   color: black;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 80%;
-  height: 23em;
+  height: 60vh;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 11vh;
   text-align: center;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 @media screen and (min-width: 768px) {
   body .container .content.about-contact .about {
     width: 41em;
-    overflow-y: hidden;
   }
 }
 body .container .content.about-contact .about a {
