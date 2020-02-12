@@ -643,6 +643,7 @@ body .container .content.projects-detail .header-project {
   margin-top: 90px;
   position: fixed;
   padding: 0 1em;
+  text-align: center;
 }
 
 body .container .content.projects-detail .header-project h2 {
@@ -695,10 +696,10 @@ body .container .content.projects-detail .list-images {
   display: flex;
   flex-direction: column;
   background-color: white;
-  width: 77vw;
+  width: 90vw;
   justify-content: center;
   align-items: center;
-  padding: 3em;
+  padding: 1em;
   margin-top: 65vh;
 }
 body .container .content.projects-detail .list-images a {
@@ -720,11 +721,16 @@ body .container .content.projects-detail .list-images a:hover:after {
   width: 100%;
   left: 0;
 }
-body .container .content.projects-detail .list-images img {
-  margin: 0 auto;
+body .container .content.projects-detail .list-images img:not(.mobile-screen) {
+  /* margin: 0 auto; */
   margin-bottom: 1.5em;
   margin-top: 1.5em;
-  width: 70%;
+  width: 100%;
+}
+.mobile-screen{
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+  width: 60%;
 }
 body .container .content.projects-detail .list-images .img-width {
   width: 80%;
