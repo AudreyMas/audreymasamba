@@ -854,9 +854,12 @@ body .container .content.about-contact .links a {
   border: 10px solid;
   animation: float-1 2s ease-in-out infinite;
 }
+#page {
+  display: none;
+}
 .end-loading {
   height: 50vh;
 }
 path {
-  stroke: white;
+  stroke: rgb(255, 242, 242)!important;
 }

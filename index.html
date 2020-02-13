@@ -3,7 +3,7 @@
 
 <head>
     <meta name="description"
-    content=" I'm Audrey Masamba a Front-end/Design developer with a strong interest of design and web technologies. React js, html, scss, css, ... Are technologies which I used for different projects within RTL BELGIUM, ONE4YOU, MEDIA ANIMATION, Chatbot Plus...">
+        content=" I'm Audrey Masamba a Front-end/Design developer with a strong interest of design and web technologies. React js, html, scss, css, ... Are technologies which I used for different projects within RTL BELGIUM, ONE4YOU, MEDIA ANIMATION, Chatbot Plus...">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,21 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="start-loading" id="loading">
+        <h1>WELCOME to my portfolio</h1>
+        <!-- <div class="end-loading">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets9.lottiefiles.com/datafiles/c5zgFUko8JLl7Vp/data.json"
+                background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay>
+            </lottie-player>
+        </div> -->
+    </div>
+    <div class="container page" id="page">
+
+       
+
+
+
         <div class=" home">
 
             <div class="content">
@@ -35,8 +49,8 @@
                         <li class="active"><a href="index.html"><span class="btn-menu">Home</span></a></li>
                         <li><a href="assets/html/projects.html"><span class="btn-menu">Projects</span></a></li>
                         <li><a href="assets/html/contact.html"><span class="btn-menu">About</span></a></li>
-                      </ul>
-                
+                    </ul>
+
                     <span class='title'>
                         <h1><span class="black-word">AU</span><span class="space-name">DREY</span><br /> <span
                                 class="black-word">MA</span>SAMBA</h1>
@@ -48,8 +62,8 @@
                     <li><a href="https://www.linkedin.com/in/masambaaudrey/" target="_blank">LINKEDIN</a></li>
                     <li><a href="https://github.com/AudreyMas?tab=repositories" target="_blank">GITHUB</a></li>
                     <li>
-                        <!-- <input ref=(mail) => this.mail = mail type="text" value="masambaaudrey1@gmail.com" id="myInput" /> -->
-                        <a onClick=this.copyMail>MAIL</a>
+                        <input type="text" value="masambaaudrey1@gmail.com" id="myInput" />
+                        <a onClick="copyMail()">MAIL</a>
                     </li>
                     <li><a href="assets/img/cv-Masamba_Audrey.pdf" target="_blank">CV</a></li>
                 </ul>
