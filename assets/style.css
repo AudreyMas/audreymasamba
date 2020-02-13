@@ -665,7 +665,7 @@ body .container .content.projects-detail footer{
   width: 100%;
 }
 body .container .content.projects-detail .content-project {
-  margin-top: 600px;
+  margin-top: 396px;
 
 }
 body .container .content.projects-detail .list-images {
@@ -857,9 +857,53 @@ body .container .content.about-contact .links a {
 #page {
   display: none;
 }
-.end-loading {
+/* .end-loading {
   height: 50vh;
-}
+} */
 path {
   stroke: rgb(255, 242, 242)!important;
+}
+
+.home, .about-contact{
+    opacity:0;
+    -moz-animation: anim 1s linear forwards 0.2s;
+    -webkit-animation: anim 1s linear forwards 0.2s;
+    -o-animation: anim 1s linear forwards 0.2s;
+    -ms-animation: anim 1s linear forwards 0.2s;
+    animation: anim 1s linear forwards 0.2s;
+}
+@-moz-keyframes anim {
+   0%  {opacity:0;}
+   20%  {opacity:0.2;}
+   50%  {opacity:0.5;}
+   70%  {opacity:0.7;}
+   100% {opacity:1;}
+}
+@-webkit-keyframes anim {
+  0%  {opacity:0;}
+   20%  {opacity:0.2;}
+   50%  {opacity:0.5;}
+   70%  {opacity:0.7;}
+   100% {opacity:1;}
+}
+@-o-keyframes anim {
+  0%  {opacity:0;}
+  20%  {opacity:0.2;}
+  50%  {opacity:0.5;}
+  70%  {opacity:0.7;}
+  100% {opacity:1;}
+}
+@-ms-keyframes anim {
+  0%  {opacity:0;}
+  20%  {opacity:0.2;}
+  50%  {opacity:0.5;}
+  70%  {opacity:0.7;}
+  100% {opacity:1;}
+}
+@keyframes anim {
+  0%  {opacity:0;}
+  20%  {opacity:0.2;}
+  50%  {opacity:0.5;}
+  70%  {opacity:0.7;}
+  100% {opacity:1;}
 }

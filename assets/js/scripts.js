@@ -1,4 +1,4 @@
-
+// copied mail
 function copyMail() {
   /* Get the text field */
   var copyText = document.getElementById("myInput");
@@ -11,6 +11,7 @@ function copyMail() {
   alert("text copied: " + copyText.value);
 }
 
+// Loading
 function onReady(callback) {
   var intervalId = window.setInterval(function() {
     if (document.getElementsByTagName('body')[0] !== undefined) {
@@ -19,11 +20,9 @@ function onReady(callback) {
     }
   }, 2000);
 }
-
 function setVisible(selector, visible) {
   document.querySelector(selector).style.display = visible ? 'block' : 'none';
 }
-
 onReady(function() {
   setVisible('.page', true);
   setVisible('#loading', false);
