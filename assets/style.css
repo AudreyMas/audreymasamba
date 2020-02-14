@@ -417,13 +417,13 @@ body .container .content.projects .bkg-dark {
     width: 70vw;
   }
 }
-body .container .content.projects .arrow {
+/* body .container .content.projects .arrow {
   position: absolute;
   background-color: red;
   margin-top: 83vh;
   left: 62%;
   animation: float-1 1s ease-in-out infinite;
-}
+} */
 body .container .content.projects .list-project .thelist li .img-hover {
   display: none;
   position: absolute;
@@ -653,21 +653,27 @@ body .container .content.projects-detail .header-project h2 {
   width: 100%;
   display: flex;
   justify-content: space-around;
-}
-body .container .content.projects-detail .header-project h2 img {
-  cursor:pointer;
-  width: 0.7em;
-}
-body .content.projects-detail .header-project h2 .arrow:hover,body .content.projects-detail .header-project h2 .arrow:hover .arrow{
-  animation: float-1 2s ease-in-out infinite;
-  fill: white;
+  align-items: center;
 }
 
-svg#Capa_1 {
-  width: 0.7em;
-  height: auto;
-  cursor: pointer;
-}
+
+.arrow {
+  padding: 0.7rem; /* Arrow size */
+  box-shadow: 1px -1px 0 1px #595858 inset;
+  -webkit-box-shadow: 2px -2px #595858 inset;
+  /* border: solid transparent; */
+  /* border-width: 0 0 2rem 2rem; */
+  transition: 1s;
+  margin: 0; 
+    left: 0;
+  }
+.arrow:hover {
+  box-shadow: 2px -2px 0 2px white inset;
+  -webkit-box-shadow: 4px -4px white inset;
+  animation: float-1 2s ease-in-out infinite;
+  }
+  .arrow-right { transform:rotate(225deg) }
+  .arrow-left  { transform:rotate(45deg) }
 
 body .container .content.projects-detail .header-project p {
   margin: 3em 0;
