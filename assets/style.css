@@ -670,7 +670,6 @@ body .container .content.projects-detail .header-project h2 {
 .arrow:hover {
   box-shadow: 2px -2px 0 2px white inset;
   -webkit-box-shadow: 4px -4px white inset;
-  animation: float-1 2s ease-in-out infinite;
   }
   .arrow-right { transform:rotate(225deg) }
   .arrow-left  { transform:rotate(45deg) }
