@@ -650,7 +650,25 @@ body .container .content.projects-detail .header-project h2 {
   font-size: 3em;
   color: white;
   margin: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
+body .container .content.projects-detail .header-project h2 img {
+  cursor:pointer;
+  width: 0.7em;
+}
+body .content.projects-detail .header-project h2 .arrow:hover,body .content.projects-detail .header-project h2 .arrow:hover .arrow{
+  animation: float-1 2s ease-in-out infinite;
+  fill: white;
+}
+
+svg#Capa_1 {
+  width: 0.7em;
+  height: auto;
+  cursor: pointer;
+}
+
 body .container .content.projects-detail .header-project p {
   margin: 3em 0;
   text-align: center;
