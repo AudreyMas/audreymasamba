@@ -41,7 +41,7 @@ body .container .content {
   flex-direction: column;
   z-index: 2;
   overflow-x: hidden;
-  padding: 2%;
+  /* padding: 2%; */
 }
 .home .content{
   padding:0!important;
@@ -336,17 +336,12 @@ body .container .content .links input {
   width: 2px;
 }
 body .container .content footer {
+  padding: 0 0 0.5em 0.5em;
   margin-top: auto;
   margin-right: auto;
   padding-left: 5%;
-  padding-bottom: 0.5em;
 }
-@media screen and (min-width: 768px) {
-  body .container .content footer {
-    padding: 0 0 0.5em 0.5em;
 
-  }
-}
 body .container .content footer a {
   font-size: 10px;
   font-weight: lighter;
