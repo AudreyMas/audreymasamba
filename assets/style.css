@@ -902,14 +902,8 @@ body .container .content.about-contact .links a {
 #page {
   display: none;
 }
-/* .end-loading {
-  height: 50vh;
-} */
-/* path {
-  stroke: rgb(255, 242, 242)!important;
-} */
 
-.home, .about-contact{
+.home, .about-contact, .projects{
     opacity:0;
     -moz-animation: anim 1s linear forwards 0.2s;
     -webkit-animation: anim 1s linear forwards 0.2s;
