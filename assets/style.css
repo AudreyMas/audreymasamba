@@ -107,7 +107,7 @@ body .container .home .content .menu-btns {
 @media screen and (min-width: 768px) {
   body .container .content .menu-btns, .content.about-contact .menu-btns {
     height: 240px;
-    width: fit-content;
+    width: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
