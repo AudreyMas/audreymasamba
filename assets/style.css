@@ -116,6 +116,9 @@ body .container .home .content .menu-btns {
     left: 0;
     background-color: #1a191900!important;
   }
+  body .container .content.about-contact .menu-btns{
+    background-color: #1a191900!important;
+  }
 }
 body .container .content .menu-btns li {
   box-shadow: 2px 4px 9px -5px white;
