@@ -832,6 +832,7 @@ body .container .content.about-contact .about {
   text-align: center;
   overflow-y: hidden;
 }
+
 @media screen and (min-width: 768px) {
   body .container .content.about-contact .about {
     width: 41em;
@@ -839,7 +840,11 @@ body .container .content.about-contact .about {
 }
 body .container .content.about-contact .about a {
   color: black;
+  transition: all 0.5s ease-out;
   font-weight: 700;
+}
+body .container .content.about-contact .about a:hover {
+  color:#b5b1b1 ; 
 }
 body .container .content.about-contact .links {
   justify-content: center;
