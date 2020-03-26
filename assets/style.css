@@ -1,3 +1,31 @@
+.info {
+  position: absolute;
+  right: 0;
+  margin: 1em;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border: 2px solid white;
+  padding: 0.5em;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  background-color: black;
+  transition: all 1s ease-out;
+  animation: float-1 3s ease-in-out infinite;
+}
+.info:hover{
+  border: 2px solid white;
+  color: black;
+  background-color: white;
+  animation:none;
+}
+
+
+
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 @font-face {
   font-family: "Impact Normal";
@@ -675,6 +703,7 @@ body .container .content.projects-detail .header-project h2 {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow 700", sans-serif;
 }
 
 

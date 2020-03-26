@@ -1,3 +1,10 @@
+// infos
+function info(){
+  alert("The website is still under construction.")
+}
+
+
+
 // copied mail
 function copyMail() {
   /* Get the text field */
@@ -17,6 +24,7 @@ function onReady(callback) {
     if (document.getElementsByTagName('body')[0] !== undefined) {
       window.clearInterval(intervalId);
       callback.call(this);
+      // alert("Actually the we");
     }
   }, 2000);
 }
@@ -27,3 +35,7 @@ onReady(function() {
   setVisible('.page', true);
   setVisible('#loading', false);
 });
+
+// Filter
+
+
