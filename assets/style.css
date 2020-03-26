@@ -214,7 +214,7 @@ body .container .content .menu-btns li .btn-menu {
   /* display: none; */
   /* margin-left: 3em; */
   color: #7f7d7d;
-  font-weight: 400;
+  font-weight: 700;
   transition: all 1s ease-out;
 }
 body .container .content .menu-btns li:hover .btn-menu {
