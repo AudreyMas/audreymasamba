@@ -8,7 +8,7 @@ function info(){
 // copied mail
 function copyMail() {
   /* Get the text field */
-  var copyText = document.getElementById("myInput");
+  let copyText = document.getElementById("myInput");
   /* Select the text field */
   copyText.select();
   copyText.setSelectionRange(0, 99999); /*For mobile devices*/
@@ -20,7 +20,7 @@ function copyMail() {
 
 // Loading
 function onReady(callback) {
-  var intervalId = window.setInterval(function() {
+  let intervalId = window.setInterval(function() {
     if (document.getElementsByTagName('body')[0] !== undefined) {
       window.clearInterval(intervalId);
       callback.call(this);
@@ -39,7 +39,7 @@ onReady(function() {
 
 // Filter projects page
 function filterSelection(c) {
-  var x, i;
+  let x, i;
   x = document.getElementsByClassName("filterDiv");
   if (c == "all") c = "";
   for (i = 0; i < x.length; i++) {
@@ -49,7 +49,7 @@ function filterSelection(c) {
 }
 
 function w3AddClass(element, name) {
-  var i, arr1, arr2;
+  let i, arr1, arr2;
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
   for (i = 0; i < arr2.length; i++) {
@@ -58,7 +58,7 @@ function w3AddClass(element, name) {
 }
 
 function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
+  let i, arr1, arr2;
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
   for (i = 0; i < arr2.length; i++) {
@@ -69,15 +69,5 @@ function w3RemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
-// // Add active class to the current button (highlight it)
-// var btnContainer = document.getElementById("myBtnContainer");
-// var btns = btnContainer.getElementsByClassName("btn");
-// for (var i = 0; i < btns.length; i++) {
-//   btns[i].addEventListener("click", function(){
-//     var current = document.getElementsByClassName("show");
-//     current[0].className = current[0].className.replace(" show", "");
-//     this.className += " show";
-//   });
-// }
 
 
