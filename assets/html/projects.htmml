@@ -14,28 +14,8 @@
   <!-- links scripts js -->
   <script src="../js/scripts.js" async></script>
   <!-- link favcion -->
-  <!-- <link rel="icon" type="image/png" href="img/favicon.png" /> -->
-
+  <link rel="icon" type="image/png" href="img/favicon.png" />
 </head>
-<style>
-  .filterDiv {
-    float: left;
-    color: #ffffff;
-    width: 100px;
-    display: none;
-  }
-
-  .show {
-    display: block;
-  }
-
-  #myBtnContainer {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    margin-bottom: 27px;
-  }
-</style>
 
 <body>
   <div class="container ">
@@ -49,28 +29,31 @@
 
 
       <div class="list-project">
-        <h3>PROJECTS</h3>
-        <ul id="myBtnContainer" class="links">
-         <li> <a id="modal" class="btn active" onclick="filterSelection('all')"> SHOW ALL</a></li>
-         <li> <a class="btn" onclick="filterSelection('web')"> WEB</a></li>
-         <li> <a class="btn" onclick="filterSelection('print')"> PRINT</a></li>
-         <li> <a class="btn" onclick="filterSelection('logo')"> LOGO</a></li>
-        </ul>
+        <!-- <ul class="filter">
+          <li>Web</li>
+          <li>Print</li>
+        </ul> -->
+
+
+
+
+
+
 
         <ul class="thelist">
-          <li class="filterDiv logo show">
+          <li>
             <div class="title" id="title">
               <a href="projects-pages/logos.html">
                 <h1>Logos</h1>
               </a>
             </div>
-            <p class="description show">
+            <p class="description">
               During my free time, I improve and practice my skills in design...
             </p>
-            <a href="projects-pages/logos.html" class="img-hover"><img src="../img/logo-RVizualizations.jpg" alt='imageProject' /></a>
+            <a href="#" class="img-hover"><img src="../img/logo-RVizualizations.jpg" alt='imageProject' /></a>
           </li>
 
-          <li class="filterDiv web show">
+          <li>
             <div class="title" id="title">
               <a href="projects-pages/myportfolio.html">
                 <h1>Portfolio</h1>
@@ -78,40 +61,40 @@
             </div>
             <p class="description">New portfolio coded in 2 different versions. One in <strong>React js and a back
                 part</strong> to manage my projects (add/delte/updated projects) and another in html and css </p>
-            <a href="projects-pages/myportfolio.htm" class="img-hover"><img src="../img/portfolio2020.jpg" alt='imageProject' /></a>
+            <a href="#" class="img-hover"><img src="../img/portfolio2020.jpg" alt='imageProject' /></a>
           </li>
 
-          <li class="filterDiv print show">
+          <li>
             <div class="title" id="title">
               <a href="projects-pages/fJewels.html">
                 <h1>Foubert Jewels</h1>
               </a>
             </div>
             <p class="description">Business card for a jewelry designer</p>
-            <a href="projects-pages/fJewels.html" class="img-hover"><img src="../img/jewels.png" alt='imageProject' /></a>
+            <a href="#" class="img-hover"><img src="../img/jewels.png" alt='imageProject' /></a>
           </li>
 
-          <li class="filterDiv web show">
+          <li>
             <div class="title" id="title">
               <a href="projects-pages/canevas.html">
                 <h1>Caneva</h1>
               </a>
             </div>
             <p class="description">Personal website project to help to create a cv easily</p>
-            <a href="projects-pages/canevas.html" class="img-hover"><img src="../img/canevas.jpg" alt='imageProject' /></a>
+            <a href="#" class="img-hover"><img src="../img/canevas.jpg" alt='imageProject' /></a>
           </li>
 
-          <li class="filterDiv web show">
+          <li>
             <div class="title" id="title">
               <a href="projects-pages/sixtines.html">
                 <h1>Sixtine's</h1>
               </a>
             </div>
             <p class="description">Admin e-commerce website to manage stock, clients, orders, ...</p>
-            <a href="projects-pages/sixtines.html" class="img-hover"><img src="../img/sixtines.gif" alt='imageProject' /></a>
+            <a href="#" class="img-hover"><img src="../img/sixtines.gif" alt='imageProject' /></a>
           </li>
 
-          <li class="filterDiv web show">
+          <li>
             <div class="title" id="title">
               <a href="projects-pages/feelm.html">
                 <h1>Feel'm</h1>
@@ -119,20 +102,20 @@
             </div>
             <p class="description">Application to find a movie according to your emotion. With the integration of The
               Movie Database (TMDb) API</p>
-            <a href="projects-pages/feelm.html" class="img-hover"><img src="../img/feelm.gif" alt='imageProject' /></a>
+            <a href="#" class="img-hover"><img src="../img/feelm.gif" alt='imageProject' /></a>
           </li>
 
-          <li class="filterDiv web show">
+          <li>
             <div class="title" id="title">
               <a href="projects-pages/sidasos.html">
                 <h1>Sida'sos</h1>
               </a>
             </div>
             <p class="description">An animate poster with Photoshop</p>
-            <a href="projects-pages/sidasos.html" class="img-hover"><img src="../img/sidasos.gif" alt='imageProject' /></a>
+            <a href="#" class="img-hover"><img src="../img/sidasos.gif" alt='imageProject' /></a>
           </li>
 
-          <li class="filterDiv web print show">
+          <li>
             <div class="title" id="title">
               <a href="projects-pages/one4you.html">
                 <h1>One4You</h1>
@@ -141,20 +124,20 @@
             <p class="description">The first Corporate Shopping website in France! As graphic and webdesigner I
               integrated and refonted pictures. I created some banners and templates for a refont of the website and
               design propositions for newsletter.</p>
-            <a href="projects-pages/one4you.html" class="img-hover"><img src="../img/one4You-presentation.jpg" alt='imageProject' /></a>
+            <a href="#" class="img-hover"><img src="../img/one4You-presentation.jpg" alt='imageProject' /></a>
           </li>
 
-          <li class="filterDiv logo show">
+          <li>
             <div class="title" id="title">
               <a href="projects-pages/personal-logo.html">
                 <h1>Personal Logo</h1>
               </a>
             </div>
             <p class="description">A personal Logo created with Illustrator</p>
-            <a href="projects-pages/personal-logo.html" class="img-hover"><img src="../img/logoperso.jpg" alt='imageProject' /></a>
+            <a href="#" class="img-hover"><img src="../img/logoperso.jpg" alt='imageProject' /></a>
           </li>
 
-          <li class="filterDiv web show">
+          <li>
             <div class="title" id="title">
               <a href="projects-pages/semaine-numerique.html">
                 <h1>La Semaine Numérique</h1>
@@ -163,10 +146,10 @@
             <p class="description">La Semaine Numérique is a participative and decentralized event that offers hundreds
               of digital activities, free or almost free, all over Wallonia and Brussels. I created a responsive
               newsletter and a press communication mini-site </p>
-            <a href="projects-pages/semaine-numerique.html" class="img-hover"><img src="../img/SemaineNum-presentation.gif" alt='imageProject' /></a>
+            <a href="#" class="img-hover"><img src="../img/SemaineNum-presentation.gif" alt='imageProject' /></a>
           </li>
 
-          <li class="filterDiv web logo print show">
+          <li>
             <div class="title" id="title">
               <a href="projects-pages/dessine-moi.html">
                 <h1>Dessine-moi</h1>
@@ -175,10 +158,10 @@
             <p class="description">DESSINE-MOI LA LIBERTE D'EXPRESSION is a workshop-debate on the challenges of
               caricatures and freedom of expression in the fight against discrimination.I designed the logo, responsive
               newsletter and a mini website</p>
-            <a href="projects-pages/dessine-moi.html" class="img-hover"><img src="../img/LOGO_Liberte_d_expression.jpg" alt='imageProject' /></a>
+            <a href="#" class="img-hover"><img src="../img/LOGO_Liberte_d_expression.jpg" alt='imageProject' /></a>
           </li>
 
-          <li class="filterDiv web show">
+          <li>
             <div class="title" id="title">
               <a href="projects-pages/film-ouvert.html">
                 <h1>À Films Ouverts</h1>
@@ -187,10 +170,10 @@
             <p class="description">À Films Ouverts ... is part of the United Nations International Day for Combating
               Racial Discrimination.I created / integrated a responsive newsletter, mailing of press communication,
               banners.</p>
-            <a href="projects-pages/film-ouvert.html" class="img-hover"><img src="../img/bandeau_A_Films_Ouverts.jpg" alt='imageProject' /></a>
+            <a href="#" class="img-hover"><img src="../img/bandeau_A_Films_Ouverts.jpg" alt='imageProject' /></a>
           </li>
 
-          <li class="filterDiv web show">
+          <li>
             <div class="title" id="title">
               <a href="projects-pages/amos.html">
                 <h1>Amos</h1>
@@ -199,10 +182,10 @@
             <p class="description">AMOS amo is an Open Environment Action service approved by the Wallonia Brussels
               Federation, Ministry of Youth Aid.I was able to work on the redesign of the website by creating a template
               and integrating it with bootstrap.</p>
-            <a href="projects-pages/amos.html" class="img-hover"><img src="../img/amos-presentation.jpg" alt='imageProject' /></a>
+            <a href="#" class="img-hover"><img src="../img/amos-presentation.jpg" alt='imageProject' /></a>
           </li>
 
-          <li class="filterDiv web show">
+          <li>
             <div class="title" id="title">
               <a href="projects-pages/ozge.html">
                 <h1>ÖZGE</h1>
@@ -211,10 +194,10 @@
             <p class="description">Creation of a wordpress theme on the promotion of the documentary film, Özge and his
               little Anatolia, on the history of Turkish women at the heart of immigration.I integrated a child theme
               and edited it in wordpress</p>
-            <a href="projects-pages/ozge.html" class="img-hover"><img src="../img/Ozge.jpg" alt='imageProject' /></a>
+            <a href="#" class="img-hover"><img src="../img/Ozge.jpg" alt='imageProject' /></a>
           </li>
 
-          <li class="filterDiv web show">
+          <li>
             <div class="title" id="title">
               <a href="projects-pages/bel-rtl.html">
                 <h1>Bel RTL</h1>
@@ -223,10 +206,10 @@
             <p class="description">First experience (2015) in web design in the NewMedia department at RTL Belgium.I was
               able to work on the design and cutting of the timeline for the Bel RTL radio site and to propose templates
               and create graphic elements.</p>
-            <a href="projects-pages/bel-rtl.html" class="img-hover"><img src="../img/belrtl-presentation.jpg" alt='imageProject' /></a>
+            <a href="#" class="img-hover"><img src="../img/belrtl-presentation.jpg" alt='imageProject' /></a>
           </li>
 
-          <li class="filterDiv web show">
+          <li>
             <div class="title" id="title">
               <a href="projects-pages/goodact.html">
                 <h1>GoodAct</h1>
@@ -234,11 +217,11 @@
             </div>
             <p class="description">Mobile application puts individuals and associations in contact in order to collect
               donations in kind (clothing, furniture, toys, IT equipment, etc.</p>
-            <a href="projects-pages/goodact.html" class="img-hover"><img src="../img/goodact-1.gif" alt='imageProject' /></a>
+            <a href="#" class="img-hover"><img src="../img/goodact-1.gif" alt='imageProject' /></a>
           </li>
 
 
-          <li class="filterDiv web show">
+          <li>
             <div class="title" id="title">
               <a href="projects-pages/backpacktrack.html">
                 <h1>BackPack Track</h1>
@@ -246,7 +229,7 @@
             </div>
             <p class="description">Social network for single travelers and anyone interested in trying the experience.
             </p>
-            <a href="projects-pages/backpacktrack.html" class="img-hover"><img src="../img/BPT-presentation.gif" alt='imageProject' /></a>
+            <a href="#" class="img-hover"><img src="../img/BPT-presentation.gif" alt='imageProject' /></a>
           </li>
         </ul>
       </div>
@@ -264,6 +247,8 @@
       </Footer>
     </div>
   </div>
+
+
 
 </body>
 

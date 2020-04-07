@@ -265,13 +265,13 @@ body .container .content .title-links .title .space-name {
     margin-left: 20px;
   }
 }
-body .container .content .title-links .title h1, body .container .content .title-links .title h2 {
+body .container .content .title-links .title h4, body .container .content .title-links .title h2 {
   font-family: Impact, Haettenschweiler, "Arial Narrow 700", sans-serif;
   -webkit-background-clip: text;
   background-clip: text;
 
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   body .container .content .title-links .title h1, body .container .content .title-links .title h2 {
     margin-left: -166px !important;
   }
@@ -281,6 +281,8 @@ body .container .content .title-links .title h1 {
   font-size: 13vw;
   margin: 0px 0px 0.2em 0px;
   letter-spacing: 0.5rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow 700", sans-serif;
+
 }
 @media screen and (min-width: 768px) {
   body .container .content .title-links .title h1 {
@@ -336,15 +338,14 @@ body .container .content .links li:not(:last-child) {
     margin-right: 35px;
   }
 }
-
-body .container .content .links li a {
+body .container .content .links li a, button:after {
   color: #ffff;
   font-size: 14px;
   text-transform: uppercase;
   position: relative;
   cursor: pointer;
 }
-body .container .content .links li a:after {
+body .container .content .links li a:after, button:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -378,12 +379,10 @@ body .container .content footer {
   margin-left: 0;
   }
 }
-
 body .container .content footer a {
   font-size: 10px;
-  font-weight: lighter;
   margin-bottom: 0.5em;
-  color: #5e5c5c;
+  color: #797777;
 }
 
 
@@ -585,9 +584,21 @@ body .container  ::-webkit-scrollbar-corner {
 }
 
 
-
-body .container .content.projects .list-project h1, body .container .content.projects .list-project h2 {
+body .container .content.projects .list-project h1, body .container .content.projects .list-project h3{
+ margin-top: 0 !important;
+ margin-bottom: 27px;
+}
+body .container .content.projects .list-project h1, body .container .content.projects .list-project h2,  h3 {
   font-family: Impact, Haettenschweiler, "Arial Narrow 700", sans-serif;
+  color: white;
+  font-size: 4em;
+  margin-top: 15px;
+}
+h3{  
+  text-align: center;
+}
+.about h3{
+  color: #7f7d7d;
 }
 body .container .content.projects .list-project .thelist {
   padding-top: 1em;
@@ -603,7 +614,7 @@ body .container .content.projects .list-project .thelist {
   body .container .content.projects .list-project .thelist {
     margin-left: -33px;
     /* width: 80vw; */
-    height: 90vh;
+    height: 70vh;
   }
 }
 body .container .content.projects .list-project .thelist li {
@@ -633,7 +644,7 @@ body .container .content.projects .list-project .thelist li .title h1 {
   color: white;
   transition: all 1s ease-out;
   width: 72vw;
-  letter-spacing: 15px;
+  /* letter-spacing: 15px; */
   font-size: 36px;
   text-shadow: 2px 2px 5px #7e7c7cc4;
 }
@@ -704,6 +715,7 @@ body .container .content.projects-detail .header-project h2 {
   justify-content: space-around;
   align-items: center;
   font-family: Impact, Haettenschweiler, "Arial Narrow 700", sans-serif;
+  font-weight: 500;
 }
 
 
