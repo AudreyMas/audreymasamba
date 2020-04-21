@@ -951,21 +951,20 @@ body .container .content.projects-detail .list-images a:hover:after {
   left: 0;
 }
 
-body .container .content.projects-detail .list-images img:not(.mobile-screen) {
+body .container .content.projects-detail .list-images img{
   /* margin: 0 auto; */
   margin-bottom: 1.5em;
   margin-top: 1.5em;
+}
+body .container .content.projects-detail .list-images img:not(.mobile-screen) {
   width: 80%;
 }
 
-.mobile-screen {
-  margin-bottom: 1.5em;
-  margin-top: 1.5em;
-  width: 60%;
-}
 
-body .container .content.projects-detail .list-images .img-width {
-  width: 80%;
+@media screen and (min-width: 768px) {
+  .mobile-screen {
+    width: 30%;
+  }
 }
 
 /* Contact / About page */
