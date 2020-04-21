@@ -338,14 +338,14 @@ body .container .content .links li:not(:last-child) {
     margin-right: 35px;
   }
 }
-body .container .content .links li a, button:after {
+body .container .content .links li a{
   color: #ffff;
   font-size: 14px;
   text-transform: uppercase;
   position: relative;
   cursor: pointer;
 }
-body .container .content .links li a:after, button:after {
+body .container .content .links li a:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -620,6 +620,8 @@ body .container .content.projects .list-project .thelist {
 body .container .content.projects .list-project .thelist li {
   width: fit-content;
   padding-right: 3%;
+  margin-top: 3em;
+  cursor: pointer;
 }
 body .container .content.projects .list-project .thelist li p {
   font-size: 14px;
@@ -632,7 +634,7 @@ body .container .content.projects .list-project .thelist li p {
 }
 body .container .content.projects .list-project .thelist li .title {
   font-size: 1.5em;
-  margin-top: 3em;
+  /* margin-top: 3em; */
   width: fit-content;
 }
 body .container .content.projects .list-project .thelist li .title:hover {
