@@ -957,9 +957,11 @@ body .container .content.projects-detail .list-images img{
   margin-top: 1.5em;
 }
 body .container .content.projects-detail .list-images img:not(.mobile-screen) {
-  width: 80%;
+  width: 65%;
 }
-
+.mobile-screen{
+  width:50%;
+}
 
 @media screen and (min-width: 768px) {
   .mobile-screen {
