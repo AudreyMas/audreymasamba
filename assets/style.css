@@ -1,3 +1,6 @@
+.filterDiv{
+  float:none;
+}
 .info {
   position: absolute;
   right: 0;
